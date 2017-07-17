@@ -1,0 +1,33 @@
+{
+  "name": "reactrouter",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "browser-router": "^0.2.0",
+    "history": "^4.6.3",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-scripts": "1.0.10"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "description": "This is router tutorial for begineer",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeShaurya/ReactRouter.git"
+  },
+  "author": "Shubham Maurya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeShaurya/ReactRouter/issues"
+  },
+  "homepage": "https://github.com/codeShaurya/ReactRouter#readme"
+}
