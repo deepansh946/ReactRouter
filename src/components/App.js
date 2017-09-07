@@ -4,17 +4,34 @@ import Header from './header.js';
 
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
+
+  constructor() {
+    super();
+    this.removeTodo = this.removeTodo.bind(this);
+
     this.state = {
       term: '',
       items: []
     };
   }
 
+  removeTodo(itemTobeDeleted){
+      const todos=this.state.todos;
+      const key=Object.keys(todos);
+      const newkey=key.filter((key) => {
+          if(todos[key]!==itemTobeDeleted){
+              return todos[key];
+          }});
+      const newTodo=newkey.map((key)=>{
+          return todos[key];
+      });
+      this.setState({todos:newTodo});
+  };
+
   onChange = (event) => {
     this.setState({ term: event.target.value });
   }
+
 
   onSubmit = (event) => {
     event.preventDefault();
@@ -31,7 +48,7 @@ export default class App extends Component {
           <input value={this.state.term} onChange={this.onChange} />
           <button>Submit</button>
         </form>
-        <List items={this.state.items} />
+        <List items={this.state.items}/>
       </div>
     );
   }
